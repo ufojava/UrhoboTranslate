@@ -27,6 +27,8 @@ struct ContentView: View {
                     
                     .edgesIgnoringSafeArea(.all)
                 
+                
+                
                 //Call Menu
                 MenuItem()
                     

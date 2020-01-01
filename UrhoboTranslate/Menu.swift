@@ -16,16 +16,24 @@ struct MenuItem: View {
     @State private var dictionaryInputMenuToggle = false
     @State private var editDictionaryMenuToggle = false
     @State private var listDictionaryMenuToggle = false
+    @State private var menuPlaceHolderTitleToggle = true
     
     
     var body: some View {
        
         VStack {
             
-            if dictionaryInputMenuToggle {
+           
                 VStack {
                     Spacer().frame(height: 280)
                     
+                    if menuPlaceHolderTitleToggle {
+                        Text("Urhobo for Beginners 😳")
+                            .font(.largeTitle)
+                    }
+            
+            if dictionaryInputMenuToggle {
+                
                     //Dictionary
                     HStack {
                         MenuIcon(icon: "book")
@@ -66,6 +74,8 @@ struct MenuItem: View {
                     
                 }//End List List dictionary
                 
+             
+                
                 
                 }//End Icon VStack
             
@@ -87,8 +97,10 @@ struct MenuItem: View {
                             Image(systemName: "plus.square.on.square")
                                 .resizable()
                                 .frame(width: 60, height: 60)
+                                .foregroundColor(Color.black)
                             
                             Text("Menu").fontWeight(.bold)
+                                .foregroundColor(Color.black)
                             
                         }
                     
@@ -101,9 +113,19 @@ struct MenuItem: View {
     //Function to show menu items
     func showMenuItems() {
         
-        //Toggle Dictionary Input
         withAnimation {
-            self.dictionaryInputMenuToggle.toggle()
+        self.menuPlaceHolderTitleToggle.toggle()
+        }
+        
+        
+        //Toggle Dictionary Input
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                
+           withAnimation {
+               self.dictionaryInputMenuToggle.toggle()
+            
+        }
+       
         }
         
         //Toggle Edit Dictionary
