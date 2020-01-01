@@ -36,12 +36,20 @@ struct MenuItem: View {
                 
                     //Dictionary
                     HStack {
-                        MenuIcon(icon: "book")
-                            .foregroundColor(Color.red)
-                          
-                   
-                        //Icon Legend
-                        Text("Word(s) Input").fontWeight(.bold)
+                        
+                        NavigationLink(destination: DictionaryForm()) {
+                           
+                            MenuIcon(icon: "book")
+                                     .foregroundColor(Color.red)
+                                   
+                            
+                                 //Icon Legend
+                                 Text("Word(s) Input").fontWeight(.bold)
+                                    .foregroundColor(Color.black)
+                            
+                        }
+                        
+                        
                     
                     }
                 
@@ -56,6 +64,7 @@ struct MenuItem: View {
                         
                         //Icon Legend
                         Text("Edit Dictionary").fontWeight(.bold)
+                            .foregroundColor(Color.black)
                         
                     }
             }//End Edit Dictionary
@@ -69,6 +78,7 @@ struct MenuItem: View {
                         
                         //Icon Legend
                         Text("List Dictionary").fontWeight(.bold)
+                            .foregroundColor(Color.black)
                         
                     }
                     

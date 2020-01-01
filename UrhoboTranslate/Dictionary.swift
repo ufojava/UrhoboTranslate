@@ -15,5 +15,25 @@ import CoreData
 import SwiftUI
 
 
+//CoreData Managed Class
+class Dictionary: NSManagedObject {
+    
+    @NSManaged var id: Int
+    @NSManaged var englishWord: String
+    @NSManaged var urhoboWord:  String
+    @NSManaged var imageName:   String
+    
+    
+}
 
+
+//Observable Words
+class DictionaryWord:   ObservableObject {
+    
+    @Published var id = 0
+    @Published var englishWord = ""
+    @Published var urhoboWord = ""
+    @Published var imageName = ""
+    
+}
 
