@@ -9,9 +9,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    
+    
+    
     var body: some View {
-        Text("Hello, World!")
+        
+        NavigationView {
+            
+            ZStack(alignment: .center) {
+                
+                
+                Image("IOS_Bkgrd_CurveBlue")
+                    .resizable()
+                    .scaledToFill()
+                    
+                    .edgesIgnoringSafeArea(.all)
+                
+                //Call Menu
+                MenuItem()
+                    
+            }
+        
+            
+            .navigationBarTitle(Text("Home 🏚"))
+            
+        }//End of Navigation View
+            
     }
+        
 }
 
 struct ContentView_Previews: PreviewProvider {
