@@ -59,26 +59,44 @@ struct MenuItem: View {
             if editDictionaryMenuToggle {
                     //Edit Dictionary
                     HStack {
-                        MenuIcon(icon: "pencil")
-                            .foregroundColor(Color.blue)
                         
-                        //Icon Legend
-                        Text("Edit Dictionary").fontWeight(.bold)
-                            .foregroundColor(Color.black)
-                        
-                    }
+                        //Call Edit Struct
+                        NavigationLink(destination: ListDictionary()) {//Needs new Link
+                            
+                            MenuIcon(icon: "pencil")
+                              .foregroundColor(Color.blue)
+                          
+                          //Icon Legend
+                          Text("Edit Dictionary").fontWeight(.bold)
+                              .foregroundColor(Color.black)
+                                                  
+                            
+                        }//End Navgation Link
+                      
+                    }//End HStack
+                
+                
             }//End Edit Dictionary
                 
             
                 if listDictionaryMenuToggle {
                     
                     HStack {
-                        MenuIcon(icon: "list.bullet.below.rectangle")
-                            .foregroundColor(Color.green)
                         
-                        //Icon Legend
-                        Text("List Dictionary").fontWeight(.bold)
-                            .foregroundColor(Color.black)
+                        //Call List Struct
+                        NavigationLink(destination: ListDictionary()) {
+                            
+                            //Call List Naviation Link
+                                  MenuIcon(icon: "list.bullet.below.rectangle")
+                                      .foregroundColor(Color.green)
+                                  
+                                  //Icon Legend
+                                  Text("List Dictionary").fontWeight(.bold)
+                                      .foregroundColor(Color.black)
+                            
+                        }
+                        
+                      
                         
                     }
                     
