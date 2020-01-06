@@ -17,7 +17,7 @@ struct ListDictionary: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     
     //Set Entity
-    @FetchRequest(entity: Dictionary.entity(), sortDescriptors: []) var dictionary: FetchedResults<Dictionary>
+    @FetchRequest(entity: Dictionary.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Dictionary.englishWord, ascending: true)]) var dictionary: FetchedResults<Dictionary>
 
     
     

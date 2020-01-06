@@ -16,6 +16,7 @@ struct MenuItem: View {
     @State private var dictionaryInputMenuToggle = false
     @State private var editDictionaryMenuToggle = false
     @State private var listDictionaryMenuToggle = false
+    @State private var searchDictionaryMenuToggle = false
     @State private var menuPlaceHolderTitleToggle = true
     
     
@@ -61,7 +62,7 @@ struct MenuItem: View {
                     HStack {
                         
                         //Call Edit Struct
-                        NavigationLink(destination: ListDictionary()) {//Needs new Link
+                        NavigationLink(destination: EditDeleteDictionary()) {//Needs new Link
                             
                             MenuIcon(icon: "pencil")
                               .foregroundColor(Color.blue)
@@ -101,9 +102,22 @@ struct MenuItem: View {
                     }
                     
                 }//End List List dictionary
+                    
+                    
+                    
+                    if searchDictionaryMenuToggle {
+                    
+                    HStack {
+                    
+                    MenuIcon(icon: "magnifyingglass")
+                        .foregroundColor(Color.yellow)
+                        
+                        //Icon Legennd
+                        Text("Srch Dictionary")
+                            .foregroundColor(Color.black).fontWeight(.bold)
                 
-             
-                
+                        }
+                    }//End Search Dictionary
                 
                 }//End Icon VStack
             
@@ -171,6 +185,17 @@ struct MenuItem: View {
                 self.listDictionaryMenuToggle.toggle()
             }
         }
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+    
+    withAnimation {
+        
+        self.searchDictionaryMenuToggle.toggle()
+        
+            }
+        
+    }//Emd Search Dictionary
         
     }//End Function
 }
