@@ -37,3 +37,22 @@ class DictionaryWord:   ObservableObject {
     
 }
 
+extension Dictionary {
+    
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Dictionary> {
+        
+        return NSFetchRequest<Dictionary>(entityName: "Dictionary")
+    }
+    
+    
+    var wrappedEnglishWord: String {
+          englishWord
+      }
+      
+      var wrappedUrhoboWord: String {
+          urhoboWord
+      }
+    
+    
+}
+

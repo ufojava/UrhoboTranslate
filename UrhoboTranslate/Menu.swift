@@ -108,15 +108,24 @@ struct MenuItem: View {
                     if searchDictionaryMenuToggle {
                     
                     HStack {
-                    
-                    MenuIcon(icon: "magnifyingglass")
-                        .foregroundColor(Color.yellow)
                         
-                        //Icon Legennd
-                        Text("Srch Dictionary")
-                            .foregroundColor(Color.black).fontWeight(.bold)
-                
+                        //Call Search Struct
+                        NavigationLink(destination: SearchDictionary()) {
+                            
+                            
+                            MenuIcon(icon: "magnifyingglass")
+                                .foregroundColor(Color.yellow)
+                                
+                                //Icon Legennd
+                                Text("Srch Dictionary")
+                                    .foregroundColor(Color.black).fontWeight(.bold)
+                            
                         }
+                            
+                            
+                    }
+                    
+                    
                     }//End Search Dictionary
                 
                 }//End Icon VStack

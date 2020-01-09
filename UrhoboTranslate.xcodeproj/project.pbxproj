@@ -10,6 +10,8 @@
 		03AA6D9823BD44960087C9A8 /* DictionaryInputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA6D9723BD44960087C9A8 /* DictionaryInputForm.swift */; };
 		03AA6D9A23C00C500087C9A8 /* ListDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA6D9923C00C500087C9A8 /* ListDictionary.swift */; };
 		03AA6D9C23C0FC9D0087C9A8 /* EditDeleteDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA6D9B23C0FC9D0087C9A8 /* EditDeleteDictionary.swift */; };
+		03AA6D9E23C3DAE90087C9A8 /* SearchDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA6D9D23C3DAE90087C9A8 /* SearchDictionary.swift */; };
+		03AA6DA423C725550087C9A8 /* FilteredDictionaryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA6DA323C725550087C9A8 /* FilteredDictionaryList.swift */; };
 		03ECEBB223BC0DEB00E716E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECEBB123BC0DEB00E716E8 /* AppDelegate.swift */; };
 		03ECEBB423BC0DEB00E716E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECEBB323BC0DEB00E716E8 /* SceneDelegate.swift */; };
 		03ECEBB723BC0DEB00E716E8 /* UrhoboTranslate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03ECEBB523BC0DEB00E716E8 /* UrhoboTranslate.xcdatamodeld */; };
@@ -25,6 +27,8 @@
 		03AA6D9723BD44960087C9A8 /* DictionaryInputForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryInputForm.swift; sourceTree = "<group>"; };
 		03AA6D9923C00C500087C9A8 /* ListDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDictionary.swift; sourceTree = "<group>"; };
 		03AA6D9B23C0FC9D0087C9A8 /* EditDeleteDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeleteDictionary.swift; sourceTree = "<group>"; };
+		03AA6D9D23C3DAE90087C9A8 /* SearchDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDictionary.swift; sourceTree = "<group>"; };
+		03AA6DA323C725550087C9A8 /* FilteredDictionaryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredDictionaryList.swift; sourceTree = "<group>"; };
 		03ECEBAE23BC0DEB00E716E8 /* UrhoboTranslate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrhoboTranslate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03ECEBB123BC0DEB00E716E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03ECEBB323BC0DEB00E716E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +73,9 @@
 			isa = PBXGroup;
 			children = (
 				03ECEBC823BC0EB000E716E8 /* Dictionary.swift */,
+				03AA6DA323C725550087C9A8 /* FilteredDictionaryList.swift */,
 				03AA6D9923C00C500087C9A8 /* ListDictionary.swift */,
+				03AA6D9D23C3DAE90087C9A8 /* SearchDictionary.swift */,
 				03AA6D9B23C0FC9D0087C9A8 /* EditDeleteDictionary.swift */,
 				03AA6D9723BD44960087C9A8 /* DictionaryInputForm.swift */,
 				03ECEBCA23BC0EFE00E716E8 /* Menu.swift */,
@@ -169,7 +175,9 @@
 				03ECEBB723BC0DEB00E716E8 /* UrhoboTranslate.xcdatamodeld in Sources */,
 				03AA6D9A23C00C500087C9A8 /* ListDictionary.swift in Sources */,
 				03ECEBC923BC0EB000E716E8 /* Dictionary.swift in Sources */,
+				03AA6D9E23C3DAE90087C9A8 /* SearchDictionary.swift in Sources */,
 				03AA6D9823BD44960087C9A8 /* DictionaryInputForm.swift in Sources */,
+				03AA6DA423C725550087C9A8 /* FilteredDictionaryList.swift in Sources */,
 				03ECEBB223BC0DEB00E716E8 /* AppDelegate.swift in Sources */,
 				03ECEBB923BC0DEB00E716E8 /* ContentView.swift in Sources */,
 				03ECEBB423BC0DEB00E716E8 /* SceneDelegate.swift in Sources */,
