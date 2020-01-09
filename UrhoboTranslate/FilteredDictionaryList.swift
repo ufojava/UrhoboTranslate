@@ -17,12 +17,20 @@ struct FilteredDictionaryList: View {
 
     var body: some View {
         List(fetchRequest.wrappedValue,id:  \.self) { word in
+           
+            HStack {
+                Text("English Word: \(word.englishWord) - Translation: \(word.urhoboWord)")
+                    .foregroundColor(Color.blue)
+                    .padding()
+                    
+                Image(word.imageName)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 30, height: 30)
+                    
+            }//HStack End
             
-            Text("\(word.englishWord) - \(word.urhoboWord)")
-            
-            
-            
-        }
+        }//List Loop
     }
     
     init(filter: String) {
@@ -34,11 +42,3 @@ struct FilteredDictionaryList: View {
         
 }
 
-/*
-struct FilteredDictionaryList_Previews: PreviewProvider {
-    static var previews: some View {
-        FilteredDictionaryList()
-    }
-}
- 
- */
