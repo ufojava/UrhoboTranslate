@@ -24,9 +24,9 @@ struct FilteredDictionaryList: View {
                     .padding()
                     
                 Image(word.imageName)
-                .resizable()
-                .scaledToFill()
-                .frame(width: 30, height: 30)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 30, height: 30)
                     
             }//HStack End
             

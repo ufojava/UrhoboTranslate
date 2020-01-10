@@ -62,20 +62,31 @@ struct CoreDataSearch: View {
     var body: some View {
         
         VStack {
+        
+        
+            ZStack {
+                
+                Rectangle()
+                    .frame(width:400, height: 50)
+                    .foregroundColor(Color.blue).opacity(0.4)
+                    .cornerRadius(6)
+                    .padding()
+                
+                
+                TextField("Enter Search 🔍",text: $englishSearch)
+                    .autocapitalization(.words)
+                    .disableAutocorrection(true)
+                    .padding()
             
-            
-            TextField("Enter Search 🔍",text: $englishSearch)
-                .autocapitalization(.words)
-                .disableAutocorrection(true)
-                .padding()
-            
+    
+        }//End of ZStack
+        
             
             //Get Filtered List
             FilteredDictionaryList(filter: self.englishSearch)
             
-        }
-        
-        
+            
+        }//End of VStack
         
     }
 }
