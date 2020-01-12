@@ -17,6 +17,7 @@ struct MenuItem: View {
     @State private var editDictionaryMenuToggle = false
     @State private var listDictionaryMenuToggle = false
     @State private var searchDictionaryMenuToggle = false
+    @State private var wordPlayMenuToggle = false
     @State private var menuPlaceHolderTitleToggle = true
     
     
@@ -127,6 +128,27 @@ struct MenuItem: View {
                     
                     
                     }//End Search Dictionary
+                    
+                    
+                    if wordPlayMenuToggle {
+                        
+                        HStack {
+                            
+                            //Call Word Play
+                            
+                            NavigationLink(destination: WordPlayList()) {
+                            
+                            
+                            MenuIcon(icon: "gamecontroller")
+                                .foregroundColor(Color.purple)
+                            
+                                //Icon Legend
+                                Text("Word Dic Play")
+                                    .foregroundColor(Color.black).fontWeight(.bold)
+                                
+                            }//End of the Naviagtion Link
+                        }
+                    }
                 
                 }//End Icon VStack
             
@@ -170,7 +192,7 @@ struct MenuItem: View {
         
         
         //Toggle Dictionary Input
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 
            withAnimation {
                self.dictionaryInputMenuToggle.toggle()
@@ -180,7 +202,7 @@ struct MenuItem: View {
         }
         
         //Toggle Edit Dictionary
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
             
             withAnimation {
                 self.editDictionaryMenuToggle.toggle()
@@ -188,7 +210,7 @@ struct MenuItem: View {
         }
         
         //Toggle List Dictionary
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             
             withAnimation {
                 self.listDictionaryMenuToggle.toggle()
@@ -196,7 +218,7 @@ struct MenuItem: View {
         }
         
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
     
     withAnimation {
         
@@ -204,7 +226,15 @@ struct MenuItem: View {
         
             }
         
-    }//Emd Search Dictionary
+    }//End Search Dictionary
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            
+            withAnimation {
+                
+                self.wordPlayMenuToggle.toggle()
+            }
+        }
         
     }//End Function
 }
