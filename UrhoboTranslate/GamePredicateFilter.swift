@@ -22,7 +22,7 @@ struct FilterWordGamePlay: View {
         List(fetchRequest.wrappedValue,id: \.self) { word in
             
             HStack {
-            Text(word.englishWord)
+            Text("\(word.englishWord) - ")
             Text(word.urhoboWord)
             Image(word.imageName)
                 .resizable()

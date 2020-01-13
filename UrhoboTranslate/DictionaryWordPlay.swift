@@ -22,14 +22,6 @@ struct WordPlay: View {
     
 }
 
-//Preview Struct
-struct WordPlay_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        WordPlay()
-    }
-}
 
 
 //Struct to create list for CoreData
@@ -64,10 +56,19 @@ struct WordPlayList: View {
 //Struct to test knowledge
 struct WordTest: View {
     
+    //Set CoreData Environment
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
+    //Get Dictionay Entity Details
+    @FetchRequest(entity: Dictionary.entity(), sortDescriptors: []) var dictionary: FetchedResults<Dictionary>
+
+    
     
     //Word Test
-    @State private var inEnglishWord = ""
     @State private var inUrhoboTranslation = ""
+    
+    //Variable to be assigned the randome word
+    @State private var localEnglishWord = ""
     
     
     
@@ -75,11 +76,41 @@ struct WordTest: View {
         
         Form {
             
-            Section(header: Text("English Word").bold()) {
             
-                TextField("English Word",text: $inEnglishWord)
-                    .autocapitalization(.words)
-                    .disableAutocorrection(true)
+            
+            Section(header: Text("English Word").bold()) {
+                
+                HStack {
+            
+                    Text("\(self.localEnglishWord)")
+                        .foregroundColor(Color.green)
+                    Spacer()
+                    
+                    //Button to generate word
+                    Button(action: {
+                        
+                        if let localUrhoboWord = self.dictionary.randomElement() {
+                            
+                            self.localEnglishWord = localUrhoboWord.englishWord
+                            
+                            //Reset Urhobo Word
+                            self.inUrhoboTranslation = ""
+                            
+                        }
+                        
+                        
+                    }) {
+                        
+                        
+                        Text("Get Word")
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(6)
+                        
+                    }//End Button
+                    
+                }//End HStack
             
             } //End of English Word Section
             
