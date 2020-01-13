@@ -44,10 +44,6 @@ struct WordPlayList: View {
         
                         .navigationBarTitle(Text("Word Test"),displayMode: .inline)
         
-    
-        
-        
-        
         
     }//End of View
 }
@@ -104,6 +100,7 @@ struct WordTest: View {
                         
                         Text("Get Word")
                             .padding()
+                            .frame(width:120,height: 50)
                             .background(Color.blue)
                             .foregroundColor(Color.white)
                             .cornerRadius(6)
@@ -117,10 +114,32 @@ struct WordTest: View {
             
             Section(header: Text("Urhobo Translation").bold()) {
                 
-                TextField("Transalation",text: $inUrhoboTranslation)
-                    .autocapitalization(.words)
-                    .disableAutocorrection(true)
+                HStack {
                 
+                    TextField("Transalation",text: $inUrhoboTranslation)
+                        .autocapitalization(.words)
+                        .disableAutocorrection(true)
+                    Spacer()
+                    
+                    //Button to Accept and Record Anwer
+                    Button(action: {
+                        
+                        //Play Sound - Enter Code Here
+                        //record Score - Enter Code Here
+                        
+                        
+                    }) {
+                        
+                        Text("Accept")
+                            .padding()
+                            .frame(width:120,height: 50)
+                            .background(Color.blue)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(6)
+                        
+                    }
+                
+                }
             }//End of Urhobo Word Section
             
             Section(header: Text("Result From Game").bold()) {
