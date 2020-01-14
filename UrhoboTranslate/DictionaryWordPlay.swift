@@ -124,9 +124,17 @@ struct WordTest: View {
                     //Button to Accept and Record Anwer
                     Button(action: {
                         
-                        //Play Sound - Enter Code Here
-                        //record Score - Enter Code Here
                         
+                        if self.inUrhoboTranslation != "" {
+                        //Play Sound - Enter Code Here
+                        playSound(sound: "correct", type: "m4a")
+                        //record Score - Enter Code Here
+                            
+                        } else {
+                            
+                            //Play incorrect sound file
+                            playSound(sound: "incorrect", type: "m4a")
+                        }
                         
                     }) {
                         
