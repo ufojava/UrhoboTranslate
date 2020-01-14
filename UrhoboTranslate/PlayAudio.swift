@@ -35,4 +35,18 @@ func playSound(sound: String, type: String) {
     }
 }
 
+//Read Text using Synthersizer
+
+func readRandomEnglishWord(word: String) {
+    
+    let utterance = AVSpeechUtterance(string: word)
+    utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+    utterance.rate = 0.1
+    
+    let syntheresizer = AVSpeechSynthesizer()
+        syntheresizer.speak(utterance)
+    
+    
+}
+
 

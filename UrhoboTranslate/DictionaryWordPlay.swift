@@ -65,10 +65,37 @@ struct WordTest: View {
     
     //Variable to be assigned the randome word
     @State private var localEnglishWord = ""
+    @State private var resultEmojiState = ""
+    
+    
+    //Function to process Emoji Result faces
+    func processEmoji() -> String {
+        
+        
+        var localEmojiFace = ""
+        
+        
+        if self.inUrhoboTranslation == "" {
+            
+            localEmojiFace = " Sad 🥱"
+        }
+        
+        if self.inUrhoboTranslation  != "" {
+            
+            localEmojiFace = "Happy 🤪"
+        }
+        
+        
+        return localEmojiFace
+    }
     
     
     
     var body: some View {
+        
+        
+        
+        VStack {
         
         Form {
             
@@ -85,14 +112,17 @@ struct WordTest: View {
                     //Button to generate word
                     Button(action: {
                         
-                        if let localUrhoboWord = self.dictionary.randomElement() {
+                        if let getRandomEnglishWord = self.dictionary.randomElement() {
                             
-                            self.localEnglishWord = localUrhoboWord.englishWord
+                            self.localEnglishWord = getRandomEnglishWord.englishWord
+                            readRandomEnglishWord(word: self.localEnglishWord)
                             
                             //Reset Urhobo Word
                             self.inUrhoboTranslation = ""
                             
                         }
+                        
+                    
                         
                         
                     }) {
@@ -154,11 +184,20 @@ struct WordTest: View {
                 
             //CoreData Filter from Game Play Predicate
              FilterWordGamePlay(filter: self.inUrhoboTranslation)
+                
             
             }
         }//Form Ending
+    
+        
+            
+   
+        
+        }//End of VStack
         
         
-    }
-}
+        
+    }//End Body View
+    
+}//End Struct View
 
