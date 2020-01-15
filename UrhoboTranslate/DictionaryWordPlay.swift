@@ -151,31 +151,7 @@ struct WordTest: View {
                         .disableAutocorrection(true)
                     Spacer()
                     
-                    //Button to Accept and Record Anwer
-                    Button(action: {
-                        
-                        
-                        if self.inUrhoboTranslation != "" {
-                        //Play Sound - Enter Code Here
-                        playSound(sound: "correct", type: "m4a")
-                        //record Score - Enter Code Here
-                            
-                        } else {
-                            
-                            //Play incorrect sound file
-                            playSound(sound: "incorrect", type: "m4a")
-                        }
-                        
-                    }) {
-                        
-                        Text("Accept")
-                            .padding()
-                            .frame(width:120,height: 50)
-                            .background(Color.blue)
-                            .foregroundColor(Color.white)
-                            .cornerRadius(6)
-                        
-                    }
+                    
                 
                 }
             }//End of Urhobo Word Section
@@ -183,7 +159,7 @@ struct WordTest: View {
             Section(header: Text("Result From Game").bold()) {
                 
             //CoreData Filter from Game Play Predicate
-             FilterWordGamePlay(filter: self.inUrhoboTranslation)
+            FilterWordGamePlay(filter: self.inUrhoboTranslation)
                 
             
             }

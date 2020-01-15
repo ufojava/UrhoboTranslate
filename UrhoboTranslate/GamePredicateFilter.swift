@@ -15,6 +15,8 @@ struct FilterWordGamePlay: View {
     //Fetch Request
     var fetchRequest:FetchRequest<Dictionary>
     
+    @State private var wordCorrect = false
+    
     var body: some View {
         
      
@@ -28,6 +30,30 @@ struct FilterWordGamePlay: View {
                 .resizable()
                 .scaledToFill()
                 .frame(width:30, height: 30)
+                Spacer()
+                
+                
+                Button(action: {
+                    
+                    if word.englishWord != "" {
+                        
+                        self.wordCorrect = true
+                        
+                        //Play sound
+                        playSound(sound: "correct", type: "m4a")
+                        
+                    }
+                    
+                }) {
+                    
+                    Text("Score")
+                        .padding()
+                        .frame(width:120,height: 50)
+                        .background(Color.blue)
+                        .foregroundColor(Color.white)
+                        .cornerRadius(6)
+                    
+                }
                     
             
             }
