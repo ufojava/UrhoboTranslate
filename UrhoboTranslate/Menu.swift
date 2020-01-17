@@ -13,12 +13,18 @@ import SwiftUI
 struct MenuItem: View {
     
     //Toggle for menus
-    @State private var dictionaryInputMenuToggle = false
-    @State private var editDictionaryMenuToggle = false
+    @State private var settingsMenuToggle = false
+    @State private var searchMenuToggle = false
+    
+   
     @State private var listDictionaryMenuToggle = false
     @State private var searchDictionaryMenuToggle = false
     @State private var wordPlayMenuToggle = false
     @State private var menuPlaceHolderTitleToggle = true
+    
+    
+    
+
     
     
     var body: some View {
@@ -27,83 +33,84 @@ struct MenuItem: View {
             
            
                 VStack {
-                    Spacer().frame(height: 280)
+                    Spacer().frame(height: 230)
+                    
+                    
                     
                     if menuPlaceHolderTitleToggle {
-                        Text("Urhobo for Beginners 😳")
-                            .font(.largeTitle)
-                    }
+                        
+                        VStack {
+                        
+                           
+                            Text("Urhobo for Beginners 😳")
+                                
+                                .font(.headline)
+                                .foregroundColor(Color.black)
+                                .shadow(radius: 3.0)
+                                
+                          
+                            Image("mainPageArtV2")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width:110, height:110)
+                                .shadow(radius: 3.0)
+                    
+                
+                        }.transition(.scale)
+                        
+                    }//End Menu Place Holder
+                    
+                 
             
-            if dictionaryInputMenuToggle {
+            if settingsMenuToggle {
                 
                     //Dictionary
                     HStack {
                         
-                        NavigationLink(destination: DictionaryForm()) {
-                           
-                            MenuIcon(icon: "book")
-                                     .foregroundColor(Color.red)
-                                   
+                        NavigationLink(destination: Settings()) {
                             
-                                 //Icon Legend
-                                 Text("Word(s) Input").fontWeight(.bold)
-                                    .foregroundColor(Color.black)
                             
+                            MenuIcon(icon: "gear")
+                                .foregroundColor(Color.red)
+                            
+                            //Icon Legend
+                            Text("Settings    ").fontWeight(.bold)
+                                .foregroundColor(Color.black)
+                            
+                          
                         }
                         
                         
                     
-                    }
+                    }.padding()
                 
-            }//End dictionary Input
+            }//Search Menu
                 
-                
-            if editDictionaryMenuToggle {
-                    //Edit Dictionary
-                    HStack {
-                        
-                        //Call Edit Struct
-                        NavigationLink(destination: EditDeleteDictionary()) {//Needs new Link
-                            
-                            MenuIcon(icon: "pencil")
-                              .foregroundColor(Color.blue)
-                          
-                          //Icon Legend
-                          Text("Edit Dictionary").fontWeight(.bold)
-                              .foregroundColor(Color.black)
-                                                  
-                            
-                        }//End Navgation Link
-                      
-                    }//End HStack
-                
-                
-            }//End Edit Dictionary
-                
+    
             
-                if listDictionaryMenuToggle {
+                if searchMenuToggle {
                     
                     HStack {
                         
                         //Call List Struct
-                        NavigationLink(destination: ListDictionary()) {
+                        NavigationLink(destination: SearchMenu()) {
                             
                             //Call List Naviation Link
-                                  MenuIcon(icon: "list.bullet.below.rectangle")
+                                  MenuIcon(icon: "magnifyingglass")
                                       .foregroundColor(Color.green)
                                   
                                   //Icon Legend
-                                  Text("List Dictionary").fontWeight(.bold)
+                                  Text("Srch Menu").fontWeight(.bold)
                                       .foregroundColor(Color.black)
                             
                         }
                         
                       
                         
-                    }
+                    }.padding()
                     
                 }//End List List dictionary
-                    
+                    /*
                     
                     
                     if searchDictionaryMenuToggle {
@@ -128,7 +135,7 @@ struct MenuItem: View {
                     
                     
                     }//End Search Dictionary
-                    
+                    */
                     
                     if wordPlayMenuToggle {
                         
@@ -143,7 +150,7 @@ struct MenuItem: View {
                                 .foregroundColor(Color.purple)
                             
                                 //Icon Legend
-                                Text("Word Dic Play")
+                                Text("Learning  ")
                                     .foregroundColor(Color.black).fontWeight(.bold)
                                 
                             }//End of the Naviagtion Link
@@ -169,13 +176,13 @@ struct MenuItem: View {
                             HStack {
                             Image(systemName: "plus.square.on.square")
                                 .resizable()
-                                .frame(width: 60, height: 60)
+                                .frame(width: 45, height: 45)
                                 .foregroundColor(Color.black)
                             
                             Text("Menu").fontWeight(.bold)
                                 .foregroundColor(Color.black)
                             
-                        }
+                            }.padding()
                     
                         
                     }
@@ -186,43 +193,32 @@ struct MenuItem: View {
     //Function to show menu items
     func showMenuItems() {
         
+       
+        
         withAnimation {
         self.menuPlaceHolderTitleToggle.toggle()
         }
         
         
-        //Toggle Dictionary Input
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        
+        //Toggle Settings
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 
            withAnimation {
-               self.dictionaryInputMenuToggle.toggle()
+            self.settingsMenuToggle.toggle()
             
-        }
+            }
        
         }
         
-        //Toggle Edit Dictionary
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-            
-            withAnimation {
-                self.editDictionaryMenuToggle.toggle()
-            }
-        }
-        
-        //Toggle List Dictionary
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            
-            withAnimation {
-                self.listDictionaryMenuToggle.toggle()
-            }
-        }
+   
         
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
     
     withAnimation {
         
-        self.searchDictionaryMenuToggle.toggle()
+        self.searchMenuToggle.toggle()
         
             }
         
@@ -257,7 +253,7 @@ struct MenuIcon: View {
             
             Image(systemName: icon)
                 .resizable()
-                .frame(width:55, height: 55)
+                .frame(width:35, height: 35)
                 .shadow(color: .black, radius: 0.3, x: 1, y: 1)
             
         }

@@ -65,29 +65,11 @@ struct WordTest: View {
     
     //Variable to be assigned the randome word
     @State private var localEnglishWord = ""
-    @State private var resultEmojiState = ""
+   
     
     
-    //Function to process Emoji Result faces
-    func processEmoji() -> String {
-        
-        
-        var localEmojiFace = ""
-        
-        
-        if self.inUrhoboTranslation == "" {
-            
-            localEmojiFace = " Sad 🥱"
-        }
-        
-        if self.inUrhoboTranslation  != "" {
-            
-            localEmojiFace = "Happy 🤪"
-        }
-        
-        
-        return localEmojiFace
-    }
+    
+
     
     
     
@@ -163,6 +145,8 @@ struct WordTest: View {
                 
             
             }
+            
+            
         }//Form Ending
     
         

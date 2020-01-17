@@ -17,6 +17,13 @@ struct FilterWordGamePlay: View {
     
     @State private var wordCorrect = false
     
+    
+    //Variable to calculate score
+    @State private var score = 0
+    
+    //Variable to show alert
+    @State private var showAlert = false
+    
     var body: some View {
         
      
@@ -39,6 +46,12 @@ struct FilterWordGamePlay: View {
                         
                         self.wordCorrect = true
                         
+                        //Set Alert to true
+                        self.showAlert = true
+                        
+                        //Calculate score
+                        self.score += 1
+                        
                         //Play sound
                         playSound(sound: "correct", type: "m4a")
                         
@@ -53,14 +66,19 @@ struct FilterWordGamePlay: View {
                         .foregroundColor(Color.white)
                         .cornerRadius(6)
                     
-                }
+                        .alert(isPresented: self.$showAlert) {
+                            Alert(title: Text("Game Progress"), message: Text("Score: \(self.score)"), dismissButton: .default(Text("To Continue, Click Get Word!!"))) 
+                            
+                    }//Show Alert
+                    
+                }//Button Closure
                     
             
-            }
+            }//Hstack
             
-        }
+        }//List
         
-    }
+    }//Body View
     
     
     //Init for Filter for Fetch Request

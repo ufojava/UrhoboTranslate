@@ -24,15 +24,13 @@ struct ContentView: View {
                 Image("IOS_Bkgrd_CurveBlue")
                     .resizable()
                     .scaledToFill()
-                    
-                    .edgesIgnoringSafeArea(.all)
                 
                 
                 
                 //Call Menu
                 MenuItem()
                     
-            }
+                }.padding()
         
             
             .navigationBarTitle(Text("Home 🏚"))
