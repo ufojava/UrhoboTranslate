@@ -52,7 +52,7 @@ struct MenuItem: View {
                             Image("mainPageArtV2")
                                 .resizable()
                                 .scaledToFill()
-                                .frame(width:110, height:110)
+                                .frame(width:100, height:100)
                                 .shadow(radius: 3.0)
                     
                 
@@ -64,6 +64,16 @@ struct MenuItem: View {
             
             if settingsMenuToggle {
                 
+                //Menu Header
+                
+                
+                Text("Menu Options 👇🏿👇🏿👇🏿")
+                    .bold()
+                    .font(.headline)
+             
+                Spacer().frame(height:30)
+                   
+                
                     //Dictionary
                     HStack {
                         
@@ -74,17 +84,14 @@ struct MenuItem: View {
                                 .foregroundColor(Color.red)
                             
                             //Icon Legend
-                            Text("Settings    ").fontWeight(.bold)
+                            Text("Settings ").fontWeight(.bold)
                                 .foregroundColor(Color.black)
                             
-                          
                         }
-                        
-                        
                     
-                    }.padding()
+                    }
                 
-            }//Search Menu
+            }//Settings Menu
                 
     
             
@@ -100,7 +107,7 @@ struct MenuItem: View {
                                       .foregroundColor(Color.green)
                                   
                                   //Icon Legend
-                                  Text("Srch Menu").fontWeight(.bold)
+                                  Text("Search   ").fontWeight(.bold)
                                       .foregroundColor(Color.black)
                             
                         }
@@ -110,32 +117,7 @@ struct MenuItem: View {
                     }.padding()
                     
                 }//End List List dictionary
-                    /*
                     
-                    
-                    if searchDictionaryMenuToggle {
-                    
-                    HStack {
-                        
-                        //Call Search Struct
-                        NavigationLink(destination: SearchDictionary()) {
-                            
-                            
-                            MenuIcon(icon: "magnifyingglass")
-                                .foregroundColor(Color.yellow)
-                                
-                                //Icon Legennd
-                                Text("Srch Dictionary")
-                                    .foregroundColor(Color.black).fontWeight(.bold)
-                            
-                        }
-                            
-                            
-                    }
-                    
-                    
-                    }//End Search Dictionary
-                    */
                     
                     if wordPlayMenuToggle {
                         
@@ -143,14 +125,14 @@ struct MenuItem: View {
                             
                             //Call Word Play
                             
-                            NavigationLink(destination: WordPlayList()) {
+                            NavigationLink(destination: Learning()) {
                             
                             
-                            MenuIcon(icon: "gamecontroller")
+                            MenuIcon(icon: "book")
                                 .foregroundColor(Color.purple)
                             
                                 //Icon Legend
-                                Text("Learning  ")
+                                Text("Learning ")
                                     .foregroundColor(Color.black).fontWeight(.bold)
                                 
                             }//End of the Naviagtion Link

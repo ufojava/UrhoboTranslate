@@ -10,6 +10,7 @@
 		0362D43723CE6C0F003CA0DA /* PlayAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D43623CE6C0F003CA0DA /* PlayAudio.swift */; };
 		0362D43A23D106DC003CA0DA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D43923D106DC003CA0DA /* Settings.swift */; };
 		0362D43C23D123AE003CA0DA /* SearchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D43B23D123AE003CA0DA /* SearchMenu.swift */; };
+		0362D43E23D271D5003CA0DA /* Learning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D43D23D271D5003CA0DA /* Learning.swift */; };
 		0377244623CA32160037449C /* DictionaryWordPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0377244523CA32160037449C /* DictionaryWordPlay.swift */; };
 		039CD51823CA984E00508544 /* GamePredicateFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039CD51723CA984E00508544 /* GamePredicateFilter.swift */; };
 		03AA6D9823BD44960087C9A8 /* DictionaryInputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA6D9723BD44960087C9A8 /* DictionaryInputForm.swift */; };
@@ -34,6 +35,7 @@
 		0362D43623CE6C0F003CA0DA /* PlayAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAudio.swift; sourceTree = "<group>"; };
 		0362D43923D106DC003CA0DA /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		0362D43B23D123AE003CA0DA /* SearchMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMenu.swift; sourceTree = "<group>"; };
+		0362D43D23D271D5003CA0DA /* Learning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning.swift; sourceTree = "<group>"; };
 		0377244523CA32160037449C /* DictionaryWordPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryWordPlay.swift; sourceTree = "<group>"; };
 		039CD51723CA984E00508544 /* GamePredicateFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePredicateFilter.swift; sourceTree = "<group>"; };
 		03AA6D9723BD44960087C9A8 /* DictionaryInputForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryInputForm.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				0362D43923D106DC003CA0DA /* Settings.swift */,
 				0362D43B23D123AE003CA0DA /* SearchMenu.swift */,
+				0362D43D23D271D5003CA0DA /* Learning.swift */,
 			);
 			path = SubMenus;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				03AA6D9A23C00C500087C9A8 /* ListDictionary.swift in Sources */,
 				03ECEBC923BC0EB000E716E8 /* Dictionary.swift in Sources */,
 				0362D43C23D123AE003CA0DA /* SearchMenu.swift in Sources */,
+				0362D43E23D271D5003CA0DA /* Learning.swift in Sources */,
 				03AA6D9E23C3DAE90087C9A8 /* SearchDictionary.swift in Sources */,
 				03AA6D9823BD44960087C9A8 /* DictionaryInputForm.swift in Sources */,
 				039CD51823CA984E00508544 /* GamePredicateFilter.swift in Sources */,

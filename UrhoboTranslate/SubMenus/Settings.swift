@@ -31,7 +31,7 @@ struct Settings: View {
                 Image("IOS_Bkgrd_CurveBlue")
                     .resizable()
                     .scaledToFill()
-                    .edgesIgnoringSafeArea(.all)
+                   
                 
                 Button(action: {
                     
@@ -50,7 +50,12 @@ struct Settings: View {
                     //Dictionary Icon
                     if dictionaryInputMenuToggle {
                         
-                    
+                        //Menu Options
+                        Text("Menu Options 👇🏿👇🏿👇🏿")
+                               .bold()
+                               .font(.headline)
+                        
+                           Spacer().frame(height:30)
                         
                         NavigationLink(destination: DictionaryForm()) {
               

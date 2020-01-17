@@ -29,7 +29,7 @@ struct SearchMenu: View {
                                        Image("IOS_Bkgrd_CurveBlue")
                                            .resizable()
                                            .scaledToFill()
-                                           .edgesIgnoringSafeArea(.all)
+                                           
                                        
                                        Button(action: {
                                            
@@ -49,6 +49,12 @@ struct SearchMenu: View {
                                 
                                 if listDictionaryMenuToggle {
                                     
+                                    Text("Menu Options 👇🏿👇🏿👇🏿")
+                                           .bold()
+                                           .font(.headline)
+                                    
+                                       Spacer().frame(height:30)
+                                    
                                     
                                     NavigationLink(destination: ListDictionary()) {
                                         
@@ -61,10 +67,11 @@ struct SearchMenu: View {
                                         //Icon Legend
                                         Text("Get Dictionary List")
                                             .foregroundColor(Color.black).fontWeight(.bold)
+                                            
                                         
                                         
                                         }//End HStack
-                                    }
+                                    }//End Navigation Link
                                     
                                     
                                 }//end List If
