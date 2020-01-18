@@ -21,10 +21,12 @@ struct ContentView: View {
             ZStack(alignment: .center) {
                 
                 
-                Image("IOS_Bkgrd_CurveBlue")
+                Image("backgroundV2")
                     .resizable()
                     .scaledToFill()
+                Spacer().frame(height:240)
                 
+    
                 
                 
                 //Call Menu

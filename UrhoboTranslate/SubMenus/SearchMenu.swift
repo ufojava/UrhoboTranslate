@@ -26,7 +26,7 @@ struct SearchMenu: View {
                                
                                VStack {
                                
-                                       Image("IOS_Bkgrd_CurveBlue")
+                                       Image("backgroundV2")
                                            .resizable()
                                            .scaledToFill()
                                            

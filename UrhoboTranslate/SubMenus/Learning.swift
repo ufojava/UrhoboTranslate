@@ -25,10 +25,13 @@ struct Learning: View {
             ZStack {
                 
                 VStack {
+                    Spacer().frame(height:30)
                     
-                    Image("IOS_Bkgrd_CurveBlue")
+                    Image("backgroundV2")
                         .resizable()
                         .scaledToFill()
+                    
+                   
                     
                     //Button to show menu
                     Button(action: {
@@ -45,6 +48,8 @@ struct Learning: View {
                     
                     
                 }
+                
+                
                 
                 VStack {
                  
