@@ -12,6 +12,7 @@ import SwiftUI
 struct Learning: View {
     
     //State Variable for Leaning
+    @State private var learnImageToggle = true
     @State private var learningMenuToggle = false
     @State private var wordGameMenuToggle = false
     
@@ -52,6 +53,30 @@ struct Learning: View {
                 
                 
                 VStack {
+                    
+                //Insert Settings image
+                if learnImageToggle{
+                    
+                    VStack {
+                        
+                            Spacer().frame(height:300)
+                                
+                            
+                            Image("SubMenuImageV3")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width:200, height:200)
+                            .shadow(radius: 3.0)
+                            
+                            }.transition(.scale)
+                        
+                        
+                
+                    Spacer()
+                    
+                }
+                    
+                    
                  
                 if learningMenuToggle {
                     
@@ -127,11 +152,20 @@ struct Learning: View {
             
             withAnimation {
                 
-                self.learningMenuToggle.toggle()
+                self.learnImageToggle.toggle()
+                
             }
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            
+            withAnimation {
+                
+                self.learningMenuToggle.toggle()
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             
             withAnimation {
                 

@@ -21,7 +21,7 @@ struct ContentView: View {
             ZStack(alignment: .center) {
                 
                 
-                Image("backgroundV2")
+                Image("backgroundMainPage")
                     .resizable()
                     .scaledToFill()
                 Spacer().frame(height:240)

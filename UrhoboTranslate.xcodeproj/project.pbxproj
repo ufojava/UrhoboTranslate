@@ -79,6 +79,29 @@
 			path = SubMenus;
 			sourceTree = "<group>";
 		};
+		0362D43F23D517F8003CA0DA /* MenuOptions */ = {
+			isa = PBXGroup;
+			children = (
+				03AA6D9D23C3DAE90087C9A8 /* SearchDictionary.swift */,
+				0377244523CA32160037449C /* DictionaryWordPlay.swift */,
+				03AA6D9723BD44960087C9A8 /* DictionaryInputForm.swift */,
+				03AA6D9923C00C500087C9A8 /* ListDictionary.swift */,
+				03AA6D9B23C0FC9D0087C9A8 /* EditDeleteDictionary.swift */,
+			);
+			path = MenuOptions;
+			sourceTree = "<group>";
+		};
+		0362D44023D518C0003CA0DA /* MenuFunctionClasses */ = {
+			isa = PBXGroup;
+			children = (
+				03ECEBC823BC0EB000E716E8 /* Dictionary.swift */,
+				0362D43623CE6C0F003CA0DA /* PlayAudio.swift */,
+				03AA6DA323C725550087C9A8 /* FilteredDictionaryList.swift */,
+				039CD51723CA984E00508544 /* GamePredicateFilter.swift */,
+			);
+			path = MenuFunctionClasses;
+			sourceTree = "<group>";
+		};
 		03ECEBA523BC0DEB00E716E8 = {
 			isa = PBXGroup;
 			children = (
@@ -98,21 +121,14 @@
 		03ECEBB023BC0DEB00E716E8 /* UrhoboTranslate */ = {
 			isa = PBXGroup;
 			children = (
+				0362D44023D518C0003CA0DA /* MenuFunctionClasses */,
+				0362D43F23D517F8003CA0DA /* MenuOptions */,
 				0362D43823D10692003CA0DA /* SubMenus */,
-				0377244523CA32160037449C /* DictionaryWordPlay.swift */,
-				0362D43623CE6C0F003CA0DA /* PlayAudio.swift */,
 				03B3883F23CE67B500B3B699 /* correct.m4a */,
 				03B3884023CE67B600B3B699 /* incorrect.m4a */,
-				039CD51723CA984E00508544 /* GamePredicateFilter.swift */,
-				03ECEBC823BC0EB000E716E8 /* Dictionary.swift */,
-				03AA6DA323C725550087C9A8 /* FilteredDictionaryList.swift */,
-				03AA6D9923C00C500087C9A8 /* ListDictionary.swift */,
-				03AA6D9D23C3DAE90087C9A8 /* SearchDictionary.swift */,
-				03AA6D9B23C0FC9D0087C9A8 /* EditDeleteDictionary.swift */,
-				03AA6D9723BD44960087C9A8 /* DictionaryInputForm.swift */,
-				03ECEBCA23BC0EFE00E716E8 /* Menu.swift */,
 				03ECEBB123BC0DEB00E716E8 /* AppDelegate.swift */,
 				03ECEBB323BC0DEB00E716E8 /* SceneDelegate.swift */,
+				03ECEBCA23BC0EFE00E716E8 /* Menu.swift */,
 				03ECEBB823BC0DEB00E716E8 /* ContentView.swift */,
 				03ECEBBA23BC0DED00E716E8 /* Assets.xcassets */,
 				03ECEBBF23BC0DED00E716E8 /* LaunchScreen.storyboard */,

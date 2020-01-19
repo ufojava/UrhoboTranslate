@@ -16,6 +16,7 @@ import SwiftUI
 struct Settings: View {
     
 //Settings Variable
+@State private var settingsImageMenuToggle = true
 @State private var dictionaryInputMenuToggle = false
 @State private var editDictionaryMenuToggle = false
     
@@ -23,6 +24,7 @@ struct Settings: View {
     var body: some View {
         
         VStack {
+            
             
             ZStack {
                 
@@ -47,6 +49,25 @@ struct Settings: View {
                }//VStack End
             
                 VStack {
+                    
+                    
+                    //Insert Settings image
+                    if settingsImageMenuToggle {
+                        
+                        VStack {
+                        Spacer().frame(height:300)
+                        
+                        Image("SubMenuImageV3")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width:200, height:200)
+                        .shadow(radius: 3.0)
+                        
+                        }.transition(.scale)
+                        Spacer()
+                        
+                    }
+                
                     //Dictionary Icon
                     if dictionaryInputMenuToggle {
                         
@@ -111,8 +132,17 @@ struct Settings: View {
     
     func showMenu() {
         
-        //Dictionary Input Form
+        //Toggle the Picture image
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            
+            withAnimation {
+                
+                self.settingsImageMenuToggle.toggle()
+            }
+        }
+        
+        //Dictionary Input Form
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             
             withAnimation {
                 self.dictionaryInputMenuToggle.toggle()
@@ -121,7 +151,7 @@ struct Settings: View {
         }
         
         //Edit Dictionary
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             
             withAnimation {
                 self.editDictionaryMenuToggle.toggle()

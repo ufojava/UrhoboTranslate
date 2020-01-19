@@ -12,6 +12,7 @@ import SwiftUI
 struct SearchMenu: View {
     
     //State Menu for List and Search
+    @State private var searchImageMenuToggle = true
     @State private var listDictionaryMenuToggle = false
     @State private var searchDictionaryMenuToggle = false
     
@@ -46,6 +47,24 @@ struct SearchMenu: View {
                 
                 
                             VStack {
+                                
+                                //Insert Settings image
+                                if searchImageMenuToggle {
+                                    
+                                    VStack {
+                                    Spacer().frame(height:300)
+                                    
+                                    Image("SubMenuImageV3")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width:200, height:200)
+                                    .shadow(radius: 3.0)
+                                    
+                                    }.transition(.scale)
+                                    Spacer()
+                                    
+                                }
+                                
                                 
                                 if listDictionaryMenuToggle {
                                     
@@ -116,8 +135,16 @@ struct SearchMenu: View {
     
     func showMenu() {
         
-        //List Dictionary
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            
+            withAnimation {
+                
+                self.searchImageMenuToggle.toggle()
+            }
+        }
+        
+        //List Dictionary
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             
             withAnimation {
                 
@@ -126,7 +153,7 @@ struct SearchMenu: View {
         }
         
         //Search Dictionary
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             
             withAnimation {
                 

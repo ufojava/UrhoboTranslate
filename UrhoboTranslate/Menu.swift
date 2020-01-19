@@ -40,20 +40,22 @@ struct MenuItem: View {
                     if menuPlaceHolderTitleToggle {
                         
                         VStack {
-                        
-                           /*
-                            Text("Urhobo for Beginners 😳")
+                            
+                            HStack {
+                           
+                                Image("mainPageArtV2")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width:150, height:150)
+                                    .shadow(radius: 3.0)
                                 
-                                .font(.headline)
-                                .foregroundColor(Color.black)
-                                .shadow(radius: 3.0)
+                                VStack {
+                                Text("Click Menu")
+                                    .foregroundColor(Color.red)
                                 
-                          */
-                            Image("mainPageArtV2")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width:150, height:150)
-                                .shadow(radius: 3.0)
+                                Text("👇🏿👇🏿👇🏿")
+                                }
+                            }
                     
                 
                         }.transition(.scale)
