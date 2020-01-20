@@ -62,13 +62,21 @@ struct Learning: View {
                             Spacer().frame(height:300)
                                 
                             
-                            Image("SubMenuImageV3")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width:200, height:200)
-                            .shadow(radius: 3.0)
+                            Image("boyLearn")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width:180, height:180)
+                                .shadow(radius: 3.0)
                             
                             }.transition(.scale)
+                    
+                            Spacer().frame(height:90)
+                            
+                            //Menu Options
+                            Text("Menu 👇🏿👇🏿👇🏿")
+                               .bold()
+                               .foregroundColor(Color.green)
+                               .font(.system(size:20))
                         
                         
                 
@@ -77,33 +85,37 @@ struct Learning: View {
                 }
                     
                     
+                    
                  
                 if learningMenuToggle {
                     
-                    //Insert link here
+                    
+                    //Menu List for Sub Menu
+                    Text("Menu Options 👇🏿👇🏿👇🏿")
+                           .bold()
+                           .font(.headline)
+                    
+                       Spacer().frame(height:30)
+                    
+                    //Word Learning
+                    NavigationLink(destination: WordLearning()) {
                     
                     
-                        //Menu List for Sub Menu
-                        Text("Menu Options 👇🏿👇🏿👇🏿")
-                               .bold()
-                               .font(.headline)
-                        
-                           Spacer().frame(height:30)
+                            HStack {
+                                
+                                //Menu Icon
+                                MenuIcon(icon: "doc.richtext")
+                                    .foregroundColor(Color.yellow)
+                                
+                                //Menu Legend
+                                Text("Learn Words")
+                                    .foregroundColor(Color.black).fontWeight(.bold)
+                                
+                                
+                            }//End of HStack
                         
                     
-                    HStack {
-                        
-                        //Menu Icon
-                        MenuIcon(icon: "doc.richtext")
-                            .foregroundColor(Color.yellow)
-                        
-                        //Menu Legend
-                        Text("Learn Words")
-                            .foregroundColor(Color.black).fontWeight(.bold)
-                        
-                        
-                    }//End of HStack
-                    
+                    }//End to Navigation Link
                     
                 }//End of If Statement
                 

@@ -33,7 +33,7 @@ struct MenuItem: View {
             
            
                 VStack {
-                    Spacer().frame(height: 230)
+                    Spacer().frame(height: 235)
                     
                     
                     
@@ -41,20 +41,19 @@ struct MenuItem: View {
                         
                         VStack {
                             
-                            HStack {
+                            VStack {
                            
-                                Image("mainPageArtV2")
+                                Image("front_image")
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width:150, height:150)
+                                    .frame(width:230, height:100)
                                     .shadow(radius: 3.0)
+                                Spacer().frame(height:40)
                                 
-                                VStack {
-                                Text("Click Menu")
-                                    .foregroundColor(Color.red)
+                                Text("Click Menu👇🏿👇🏿👇🏿")
+                                    .foregroundColor(Color.green)
                                 
-                                Text("👇🏿👇🏿👇🏿")
-                                }
+                                
                             }
                     
                 

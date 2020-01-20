@@ -57,13 +57,21 @@ struct Settings: View {
                         VStack {
                         Spacer().frame(height:300)
                         
-                        Image("SubMenuImageV3")
+                        Image("setting")
                         .resizable()
                         .scaledToFill()
-                        .frame(width:200, height:200)
+                        .frame(width:180, height:180)
                         .shadow(radius: 3.0)
                         
                         }.transition(.scale)
+                        Spacer().frame(height:60)
+                        
+                        //Menu Options
+                        Text("Menu 👇🏿👇🏿👇🏿")
+                               .bold()
+                               //.font(.headline)
+                               .foregroundColor(Color.green)
+                               .font(.system(size:20))
                         Spacer()
                         
                     }

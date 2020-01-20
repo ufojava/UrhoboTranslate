@@ -18,13 +18,13 @@ struct ContentView: View {
         
         NavigationView {
             
-            ZStack(alignment: .center) {
+            ZStack {
                 
                 
                 Image("backgroundMainPage")
                     .resizable()
                     .scaledToFill()
-                Spacer().frame(height:240)
+                //Spacer().frame(height:400)
                 
     
                 
