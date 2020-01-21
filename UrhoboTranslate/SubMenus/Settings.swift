@@ -61,7 +61,7 @@ struct Settings: View {
                         .resizable()
                         .scaledToFill()
                         .frame(width:180, height:180)
-                        .shadow(radius: 3.0)
+                        //.shadow(radius: 3.0)
                         
                         }.transition(.scale)
                         Spacer().frame(height:60)

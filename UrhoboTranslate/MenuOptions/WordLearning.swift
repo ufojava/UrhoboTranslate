@@ -1,55 +1,75 @@
 //
-//  WordLearning.swift
+//  File.swift
 //  UrhoboTranslate
 //
-//  Created by Ufuoma Okoro on 20/01/2020.
+//  Created by Ufuoma Okoro on 21/01/2020.
 //  Copyright © 2020 Ufuoma Okoro. All rights reserved.
 //
 
-//This file teaches word and translations
+//Code to execute the word learning process
 import SwiftUI
+import CoreData
 
 struct WordLearning: View {
     
+    //Set Environement
+    @Environment(\.managedObjectContext) var managedObjectContext
     
-    var naijaObjects =  ["leg","hand","book","glasses","eyes","spoon","fork","phone","ball","finger","hair","block"]
+    //Set FetchRequest
+    @FetchRequest(entity: Dictionary.entity(), sortDescriptors: []) var dictionary: FetchedResults<Dictionary>
     
-    @State private var selectedObject = 0
+    @State private var shuffleDictionary: [String] = []
+    
+
+    
+    
+    
+    @State private var selectEnglishWord = 0
     
     var body: some View {
         
-        NavigationView { //For Testing
+        //NavigationView {
+        
+        //Form to take input
         
         Form {
             
-            Picker(selection: $selectedObject, label: Text("Select Object")) {
+            
+            
+        
+            Section(header: Text("Word Selection")) {
                 
-                ForEach(0..<5) {
+                //Button to shuffle dictionary
+                
+                Picker(selection: $selectEnglishWord, label: Text("Make Selection")) {
                     
-                    Text(self.naijaObjects[$0])
+                
+                    
+                    ForEach(0..<5) {
+                        
+                        Text("\(self.dictionary.shuffled()[$0].englishWord)")
+                }
+                
                 }
                 
             
-                
-            }
+                Text("You selected \(dictionary[selectEnglishWord].englishWord)")
             
-            Text("The Object selected is: \(naijaObjects[selectedObject])")
+            }//End of Section
+            
         }
         
-        
-        
-       
-    }//Navigation View for testing
-        
+    //}
     }
+    
 }
 
-
-
-
-
-struct WordLearning_Previews: PreviewProvider {
+struct PickerWordLearning_Preview: PreviewProvider {
+    
     static var previews: some View {
+        
         WordLearning()
     }
 }
+
+

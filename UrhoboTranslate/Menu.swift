@@ -47,7 +47,7 @@ struct MenuItem: View {
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width:230, height:100)
-                                    .shadow(radius: 3.0)
+                                    //.shadow(radius: 3.0)
                                 Spacer().frame(height:40)
                                 
                                 Text("Click Menu👇🏿👇🏿👇🏿")

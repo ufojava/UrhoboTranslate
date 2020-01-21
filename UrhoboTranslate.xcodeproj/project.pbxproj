@@ -11,7 +11,8 @@
 		0362D43A23D106DC003CA0DA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D43923D106DC003CA0DA /* Settings.swift */; };
 		0362D43C23D123AE003CA0DA /* SearchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D43B23D123AE003CA0DA /* SearchMenu.swift */; };
 		0362D43E23D271D5003CA0DA /* Learning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D43D23D271D5003CA0DA /* Learning.swift */; };
-		0362D44223D62B2F003CA0DA /* WordLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D44123D62B2F003CA0DA /* WordLearning.swift */; };
+		0362D44223D62B2F003CA0DA /* WordLearningTestCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D44123D62B2F003CA0DA /* WordLearningTestCode.swift */; };
+		0362D44623D7A03A003CA0DA /* WordLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D44523D7A03A003CA0DA /* WordLearning.swift */; };
 		0377244623CA32160037449C /* DictionaryWordPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0377244523CA32160037449C /* DictionaryWordPlay.swift */; };
 		039CD51823CA984E00508544 /* GamePredicateFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039CD51723CA984E00508544 /* GamePredicateFilter.swift */; };
 		03AA6D9823BD44960087C9A8 /* DictionaryInputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA6D9723BD44960087C9A8 /* DictionaryInputForm.swift */; };
@@ -37,7 +38,8 @@
 		0362D43923D106DC003CA0DA /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		0362D43B23D123AE003CA0DA /* SearchMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMenu.swift; sourceTree = "<group>"; };
 		0362D43D23D271D5003CA0DA /* Learning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning.swift; sourceTree = "<group>"; };
-		0362D44123D62B2F003CA0DA /* WordLearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordLearning.swift; sourceTree = "<group>"; };
+		0362D44123D62B2F003CA0DA /* WordLearningTestCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordLearningTestCode.swift; sourceTree = "<group>"; };
+		0362D44523D7A03A003CA0DA /* WordLearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordLearning.swift; sourceTree = "<group>"; };
 		0377244523CA32160037449C /* DictionaryWordPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryWordPlay.swift; sourceTree = "<group>"; };
 		039CD51723CA984E00508544 /* GamePredicateFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePredicateFilter.swift; sourceTree = "<group>"; };
 		03AA6D9723BD44960087C9A8 /* DictionaryInputForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryInputForm.swift; sourceTree = "<group>"; };
@@ -89,7 +91,8 @@
 				03AA6D9723BD44960087C9A8 /* DictionaryInputForm.swift */,
 				03AA6D9923C00C500087C9A8 /* ListDictionary.swift */,
 				03AA6D9B23C0FC9D0087C9A8 /* EditDeleteDictionary.swift */,
-				0362D44123D62B2F003CA0DA /* WordLearning.swift */,
+				0362D44123D62B2F003CA0DA /* WordLearningTestCode.swift */,
+				0362D44523D7A03A003CA0DA /* WordLearning.swift */,
 			);
 			path = MenuOptions;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				03ECEBCB23BC0EFE00E716E8 /* Menu.swift in Sources */,
 				03ECEBB723BC0DEB00E716E8 /* UrhoboTranslate.xcdatamodeld in Sources */,
 				0377244623CA32160037449C /* DictionaryWordPlay.swift in Sources */,
+				0362D44623D7A03A003CA0DA /* WordLearning.swift in Sources */,
 				03AA6D9A23C00C500087C9A8 /* ListDictionary.swift in Sources */,
 				03ECEBC923BC0EB000E716E8 /* Dictionary.swift in Sources */,
 				0362D43C23D123AE003CA0DA /* SearchMenu.swift in Sources */,
@@ -234,7 +238,7 @@
 				03AA6D9E23C3DAE90087C9A8 /* SearchDictionary.swift in Sources */,
 				03AA6D9823BD44960087C9A8 /* DictionaryInputForm.swift in Sources */,
 				039CD51823CA984E00508544 /* GamePredicateFilter.swift in Sources */,
-				0362D44223D62B2F003CA0DA /* WordLearning.swift in Sources */,
+				0362D44223D62B2F003CA0DA /* WordLearningTestCode.swift in Sources */,
 				0362D43A23D106DC003CA0DA /* Settings.swift in Sources */,
 				03AA6DA423C725550087C9A8 /* FilteredDictionaryList.swift in Sources */,
 				03ECEBB223BC0DEB00E716E8 /* AppDelegate.swift in Sources */,
