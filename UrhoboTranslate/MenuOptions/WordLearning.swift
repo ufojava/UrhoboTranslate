@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  WordLearning.swift
 //  UrhoboTranslate
 //
 //  Created by Ufuoma Okoro on 21/01/2020.
@@ -18,51 +18,53 @@ struct WordLearning: View {
     //Set FetchRequest
     @FetchRequest(entity: Dictionary.entity(), sortDescriptors: []) var dictionary: FetchedResults<Dictionary>
     
-    @State private var shuffleDictionary: [String] = []
     
 
     
-    
-    
-    @State private var selectEnglishWord = 0
+
     
     var body: some View {
-        
-        //NavigationView {
-        
-        //Form to take input
-        
-        Form {
-            
-            
-            
-        
-            Section(header: Text("Word Selection")) {
-                
-                //Button to shuffle dictionary
-                
-                Picker(selection: $selectEnglishWord, label: Text("Make Selection")) {
-                    
-                
-                    
-                    ForEach(0..<5) {
+       
+       
+            VStack {
+                       
+                       List {
+                           
+                           ForEach(dictionary.shuffled().prefix(upTo: 10),id: \.self) { word in
+                            
+                            
+                            HStack {
+                               Text("\(word.englishWord)")
+                                    .foregroundColor(Color.blue)
+                            
+                                Text("| \(word.urhoboWord) |")
+                                    .foregroundColor(Color.green)
+                                    
+                                Image(word.imageName)
+                                    .resizable()
+                                    .frame(width:40, height: 40)
+                                    
+                              
+                            }//HStack
+                            
+                           }//End of ForEach
                         
-                        Text("\(self.dictionary.shuffled()[$0].englishWord)")
-                }
+                       }//End of List
                 
-                }
+               
+                        .navigationBarTitle(Text("Begin Learning"),displayMode: .inline)
                 
-            
-                Text("You selected \(dictionary[selectEnglishWord].englishWord)")
-            
-            }//End of Section
-            
-        }
         
-    //}
-    }
+        
+        
+        }//Emd of VStack
+            
+        
+        }//End of Body View
     
-}
+    }//End of Main View
+    
+
 
 struct PickerWordLearning_Preview: PreviewProvider {
     
@@ -72,4 +74,35 @@ struct PickerWordLearning_Preview: PreviewProvider {
     }
 }
 
+    
+    
 
+struct refreshList: View {
+    
+    //Set Environement
+      @Environment(\.managedObjectContext) var managedObjectContext
+      
+      //Set FetchRequest
+      @FetchRequest(entity: Dictionary.entity(), sortDescriptors: []) var dictionary: FetchedResults<Dictionary>
+    
+    var body: some View {
+        
+        
+        VStack {
+                
+                List {
+                    
+                    ForEach(dictionary.shuffled().prefix(upTo: 10),id: \.self) { word in
+                        
+                        Text("\(word.englishWord)")
+                        
+                    }
+                }
+        
+                
+
+        }
+        
+        
+    }
+}
